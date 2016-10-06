@@ -165,13 +165,13 @@ def sign(credentials, http_method, path, headers, params,
     return result
 
 if __name__ == "__main__":
-    credentials = BceCredentials("5051e56aab4e4cff8763741a3ce58a90","b995a915c46c4a97992adbb4d921a18a") #替换成自己的AK SK
+    credentials = BceCredentials("ak","sk") #替换成自己的AK SK
     http_method = "POST"
     host = 'ocr.bj.baidubce.com'
     path = '/v1/recognize/line'
     timestamp = int(time.time()) 
     #body = '{"bosPath":"/v1/app/40039/person","language":"CHN_ENG"}'  #替换成自己的BOS BucketName和Objectkey
-    jbody = json.dumps({'bosPath':'bfr-40039-student/ocr/test_ocr.png'},separators=(',',':'))
+    jbody = json.dumps({'bosPath':'your bos path'},separators=(',',':'))
     print '\n'
     print jbody
     print '\n'
